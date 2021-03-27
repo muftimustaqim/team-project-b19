@@ -1,0 +1,305 @@
+* {
+  box-sizing: border-box;
+}
+
+.menu-toggle {
+  display: flex;
+  flex-direction: column;
+  height: 20px;
+  justify-content: space-between;
+  position: relative;
+  margin-top: 25px;
+}
+
+.menu-toggle span {
+  display: none;
+  width: 28px;
+  height: 3px;
+  background-color: white;
+  border-radius: 3px;
+  transition: all 0.5s;
+}
+
+.menu-toggle input {
+  position: absolute;
+  width: 40px;
+  height: 28px;
+  left: -6px;
+  top: -3px;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.menu-toggle span:nth-child(2) {
+  transform-origin: 0 0;
+}
+
+.menu-toggle span:nth-child(4) {
+  transform-origin: 0 100%;
+}
+
+.menu-toggle input:checked~span:nth-child(2) {
+  transform: rotate(45deg) translate(-1px, -1px);
+}
+
+.menu-toggle input:checked~span:nth-child(4) {
+  transform: rotate(-45deg) translate(-1px, 0px)
+}
+
+.menu-toggle input:checked~span:nth-child(3) {
+  transform: scale(0);
+  opacity: 0;
+}
+
+body {
+  margin: 0;
+  font-family: "Nunito",sans-serif;
+}
+
+header {
+  width: 100%;
+  height: 70px;
+  top: 0;
+  position: fixed;
+  background-color: royalblue;
+  z-index: 999;
+}
+
+.container {
+  max-width: 1172px;
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-left {
+  margin: 10px;
+}
+
+.header-left img {
+  width: 90px;
+  padding: 10px;
+}
+
+.header-right ul {
+  line-height: 40px;
+}
+
+.header-right li {
+  display: inline-block;
+  list-style: none;
+  margin-right: 20px;
+}
+
+.header-right a {
+  color: white;
+  text-decoration: none;
+}
+
+.header-right a:hover {
+  color: coral;
+}
+
+.btn {
+  display: inline;
+  text-align: center;
+  line-height: 50px;
+  padding: 8px 20px;
+  border-radius: 40px;
+  color: white;
+}
+
+.btn:hover {
+  background-color: rgb(37, 75, 189);
+}
+
+.start {
+  background-color:royalblue;
+}
+
+.main {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 80px;
+  margin-bottom: -110px;
+}
+
+.title {
+  width: 500px;
+  height: 500px;
+  padding-top: 50px;
+  
+}
+
+.title h1 {
+  font-size: 45px;
+  color: royalblue;
+  margin-bottom: -10px;
+  animation: h1 2s ease forwards;
+}
+
+.title p {
+  width: 400px;
+  font-size: 20px;
+  color: #333;
+  animation: p 2s ease forwards;
+}
+
+.title a {
+  text-decoration: none;
+}
+
+.images {
+  width: 600px;
+  height: 200px;
+  padding: 30px;
+  animation: gambar 10s ease forwards;
+}
+
+.images img {
+  width: 500px;
+}
+
+.team {
+  width: 100%;
+  height: 400px;
+  padding: 10px;
+  margin-top: -10px;
+  background-color:rgb(221, 230, 255);
+}
+
+.lesson {
+  float: left;
+  width: 20%;
+  text-align: center;
+}
+
+.lesson-icon {
+  position: relative;
+  
+}
+
+.heading h2 {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.lesson-icon img {
+  width: 200px;
+  border: royalblue solid 2px;
+  border-radius: 50%;
+  transition: all 0.5s;
+}
+
+.lesson-icon img:hover {
+  transform: scale(1.3) rotate(360deg);
+  cursor: pointer;
+  border: none;
+  transition: all 0.5s;
+}
+
+.lesson-icon p {
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  color: black;
+}
+
+.contact {
+  width: 100%;
+  height: 400px;
+  padding: 10px;
+  background-color: white;
+  text-align: center;
+}
+
+.contact-form {
+  margin-bottom: 50px;
+}
+
+input, textarea {
+  max-width: 300px;
+  width: 100%;
+  margin-top: -5px;
+  margin-bottom: 10px;
+  padding: 20px;
+  font-size: 12px;
+  border: 1px solid #2b2b2b;
+  border-radius: 5px;
+}
+
+.contact-submit {
+  background-color: royalblue;
+  color: white;
+  border: none;
+}
+
+.contact-submit:hover {
+  background-color: rgb(29, 65, 172);
+  cursor: pointer;
+}
+
+.contact-form span {
+  color: red;
+}
+
+.footer {
+  width: 100%;
+  margin-top: -10px;
+  background-color:royalblue;
+  color: #fff;
+  height: 120px;
+}
+
+.copyright {
+  text-align: center;
+  padding-top: 10px;
+  font-size: 18px;
+}
+
+.copyright a {
+  text-decoration: none;
+  color: salmon;
+}
+
+.copyright a:hover {
+  color: rgb(1, 21, 78);
+}
+
+@keyframes h1 {
+  from {
+   font-size: 60px;
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    font-size: 45px;
+  }
+}
+
+@keyframes p {
+  from {
+    opacity: 0;
+    margin-top: 100px;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes gambar {
+  from {
+    opacity: 0;
+    width: 700px;
+  }
+  to {
+    opacity: 1;
+    width: 700px;
+  }
+}
